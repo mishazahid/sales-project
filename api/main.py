@@ -163,6 +163,48 @@ async def health_check():
     return {"status": "healthy", "modules_loaded": True}
 
 
+# ==================== Data Access Endpoints ====================
+
+@app.get("/api/data/leads", tags=["Data"])
+async def get_leads(limit: int = Query(5000, ge=1, le=10000)):
+    """Return CRM leads for dashboard/frontend consumption."""
+    try:
+        leads_df = pd.read_csv("data/crm_leads.csv").head(limit)
+        return leads_df.to_dict("records")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/data/email-engagement", tags=["Data"])
+async def get_email_engagement(limit: int = Query(50000, ge=1, le=200000)):
+    """Return email engagement events."""
+    try:
+        email_df = pd.read_csv("data/email_engagement.csv").head(limit)
+        return email_df.to_dict("records")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/data/call-transcripts", tags=["Data"])
+async def get_call_transcripts(limit: int = Query(5000, ge=1, le=50000)):
+    """Return call transcripts and metadata."""
+    try:
+        calls_df = pd.read_csv("data/call_transcripts.csv").head(limit)
+        return calls_df.to_dict("records")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/data/revenue-history", tags=["Data"])
+async def get_revenue_history(limit: int = Query(120, ge=1, le=500)):
+    """Return revenue history for charts/forecast."""
+    try:
+        revenue_df = pd.read_csv("data/revenue_history.csv").head(limit)
+        return revenue_df.to_dict("records")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 # ==================== Lead Scoring Endpoints ====================
 
 @app.post("/api/leads/train", tags=["Lead Scoring"])

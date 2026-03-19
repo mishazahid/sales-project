@@ -1,0 +1,206 @@
+{
+  "company_profile": {
+    "name": "CloudFlow Solutions",
+    "industry": "B2B SaaS - Project Management & Collaboration",
+    "founded": 2018,
+    "headquarters": "San Francisco, CA",
+    "description": "CloudFlow Solutions provides enterprise-grade project management and team collaboration software for mid-market companies (50-500 employees). Our platform helps teams streamline workflows, manage resources, and improve productivity through AI-powered insights.",
+    "target_customers": {
+      "company_size": "50-500 employees",
+      "industries": [
+        "Technology",
+        "Professional Services",
+        "Marketing Agencies",
+        "Consulting Firms",
+        "Manufacturing"
+      ],
+      "geographic_focus": "North America (primary), Europe (secondary)"
+    },
+    "product_tiers": [
+      {
+        "name": "Starter",
+        "price": "$29/user/month",
+        "target": "Small teams (5-20 users)"
+      },
+      {
+        "name": "Professional",
+        "price": "$49/user/month",
+        "target": "Mid-size teams (21-100 users)"
+      },
+      {
+        "name": "Enterprise",
+        "price": "$79/user/month",
+        "target": "Large teams (100+ users)"
+      }
+    ],
+    "average_deal_size": "$15,000 ARR",
+    "average_sales_cycle": "45-60 days"
+  },
+  "team_structure": {
+    "total_employees": 85,
+    "sales_team": {
+      "sales_development_representatives": 4,
+      "account_executives": 6,
+      "sales_engineers": 2,
+      "sales_managers": 2,
+      "vp_sales": 1,
+      "total_sales_team": 15
+    },
+    "marketing_team": {
+      "marketing_managers": 2,
+      "content_specialists": 2,
+      "demand_generation": 1,
+      "total_marketing_team": 5
+    },
+    "customer_success": {
+      "customer_success_managers": 3,
+      "support_specialists": 4,
+      "total_customer_success": 7
+    },
+    "other_departments": {
+      "engineering": 35,
+      "product": 8,
+      "operations": 5,
+      "executive": 3,
+      "hr": 2,
+      "finance": 5
+    }
+  },
+  "revenue_metrics": {
+    "current_arr": 4200000,
+    "monthly_recurring_revenue": 350000,
+    "annual_growth_rate": "35%",
+    "customer_count": 280,
+    "average_customer_lifetime_value": 45000,
+    "customer_acquisition_cost": 8500,
+    "ltv_cac_ratio": 5.3,
+    "monthly_churn_rate": "2.5%",
+    "annual_churn_rate": "28%"
+  },
+  "crm_volume": {
+    "total_leads_in_crm": 5000,
+    "leads_by_status": {
+      "new": 1200,
+      "contacted": 1800,
+      "qualified": 900,
+      "demo_scheduled": 450,
+      "proposal_sent": 350,
+      "negotiation": 200,
+      "closed_won": 100,
+      "closed_lost": 1000
+    },
+    "leads_by_source": {
+      "website_form": 1800,
+      "content_download": 1200,
+      "webinar": 800,
+      "referral": 600,
+      "trade_show": 400,
+      "cold_outreach": 200
+    },
+    "monthly_new_leads": 420,
+    "monthly_qualified_leads": 180,
+    "conversion_rate_new_to_qualified": "42.9%",
+    "conversion_rate_qualified_to_customer": "5.6%"
+  },
+  "kpis": {
+    "sales_kpis": {
+      "quota_per_rep": 700000,
+      "average_deals_per_rep_per_month": 2.5,
+      "win_rate": "28%",
+      "average_deal_size": 15000,
+      "sales_cycle_days": 52,
+      "demo_to_close_rate": "22%",
+      "proposal_to_close_rate": "35%"
+    },
+    "marketing_kpis": {
+      "monthly_mqls": 180,
+      "mql_to_sql_conversion": "60%",
+      "cost_per_lead": 85,
+      "cost_per_mql": 200,
+      "marketing_qualified_lead_to_customer_rate": "3.3%"
+    },
+    "email_engagement": {
+      "average_open_rate": "22%",
+      "average_click_rate": "3.5%",
+      "average_reply_rate": "2.1%",
+      "emails_sent_per_month": 8500,
+      "personalized_emails_percentage": "35%"
+    },
+    "call_metrics": {
+      "calls_per_rep_per_week": 25,
+      "average_call_duration_minutes": 32,
+      "calls_with_demo": "40%",
+      "calls_with_objections": "55%",
+      "calls_resulting_in_next_step": "45%"
+    }
+  },
+  "baseline_performance_metrics": {
+    "period": "Q4 2024 (Before AI Implementation)",
+    "lead_scoring": {
+      "method": "Manual scoring by sales reps",
+      "time_to_score_lead_hours": 2,
+      "scoring_accuracy": "Estimated 60%",
+      "high_priority_leads_identified": "35%",
+      "low_priority_leads_wasted_time": "40%"
+    },
+    "email_personalization": {
+      "method": "Manual template customization",
+      "time_per_email_minutes": 15,
+      "personalization_depth": "Basic (company name, industry)",
+      "response_rate": "2.1%",
+      "emails_per_day_per_rep": 20
+    },
+    "call_analysis": {
+      "method": "Manual notes and follow-up",
+      "time_to_review_call_minutes": 10,
+      "objections_captured": "60%",
+      "follow_up_quality": "Variable",
+      "risk_detection": "Reactive (after deal lost)"
+    },
+    "sales_efficiency": {
+      "time_spent_on_admin_tasks_percentage": "35%",
+      "time_spent_on_selling_percentage": "65%",
+      "leads_contacted_within_24_hours": "45%",
+      "follow_up_consistency": "70%"
+    },
+    "revenue_impact": {
+      "monthly_new_customers": 10,
+      "average_deal_size": 15000,
+      "monthly_new_arr": 150000,
+      "sales_team_productivity_index": 1.0,
+      "forecast_accuracy": "75%"
+    },
+    "challenges": [
+      "Manual lead scoring leads to missed opportunities",
+      "Generic emails result in low engagement",
+      "Call insights are captured inconsistently",
+      "Sales reps spend too much time on admin tasks",
+      "Difficult to predict which deals will close",
+      "Follow-up timing is inconsistent"
+    ]
+  },
+  "target_improvements": {
+    "lead_scoring": {
+      "target_accuracy": "85%",
+      "target_time_reduction": "90%",
+      "target_high_priority_identification": "70%"
+    },
+    "email_personalization": {
+      "target_response_rate": "4.5%",
+      "target_time_reduction": "80%",
+      "target_personalization_depth": "Deep (company context, pain points, use cases)"
+    },
+    "call_analysis": {
+      "target_objection_capture": "95%",
+      "target_time_reduction": "85%",
+      "target_proactive_risk_detection": "Yes"
+    },
+    "revenue_impact": {
+      "target_monthly_new_customers": "15-18",
+      "target_productivity_increase": "40%",
+      "target_forecast_accuracy": "90%",
+      "target_arr_increase": "25-30%"
+    }
+  }
+}
+

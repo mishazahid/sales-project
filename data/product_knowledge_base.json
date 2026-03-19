@@ -1,0 +1,102 @@
+[
+  {
+    "id": "kb_001",
+    "category": "Product Features",
+    "content": "CloudFlow Solutions offers real-time collaboration, task management, resource allocation, and AI-powered project insights. Our platform integrates with 50+ tools including Slack, Jira, and Microsoft Teams.",
+    "use_cases": [
+      "Team collaboration",
+      "Project tracking",
+      "Resource management"
+    ]
+  },
+  {
+    "id": "kb_002",
+    "category": "Product Features",
+    "content": "Advanced reporting and analytics dashboard provides visibility into project health, team productivity, and resource utilization. Customizable reports can be exported to PDF or Excel.",
+    "use_cases": [
+      "Reporting",
+      "Analytics",
+      "Performance tracking"
+    ]
+  },
+  {
+    "id": "kb_003",
+    "category": "Product Features",
+    "content": "Automated workflow builder allows teams to create custom processes without coding. Templates available for agile, waterfall, and hybrid methodologies.",
+    "use_cases": [
+      "Process automation",
+      "Workflow customization",
+      "Methodology support"
+    ]
+  },
+  {
+    "id": "kb_004",
+    "category": "ROI & Benefits",
+    "content": "Customers report 30% reduction in project delivery time, 25% improvement in team productivity, and 40% reduction in project management overhead. Average ROI achieved within 6 months.",
+    "use_cases": [
+      "ROI justification",
+      "Efficiency gains",
+      "Cost savings"
+    ]
+  },
+  {
+    "id": "kb_005",
+    "category": "ROI & Benefits",
+    "content": "CloudFlow reduces manual status updates by 60% through automated progress tracking and AI-powered insights. Teams save 5-10 hours per week on administrative tasks.",
+    "use_cases": [
+      "Time savings",
+      "Automation benefits",
+      "Productivity"
+    ]
+  },
+  {
+    "id": "kb_006",
+    "category": "Industry Solutions",
+    "content": "Marketing agencies use CloudFlow to manage multiple client campaigns, track deliverables, and improve client communication. Features include client portals and white-label options.",
+    "use_cases": [
+      "Marketing agencies",
+      "Client management",
+      "Multi-project tracking"
+    ]
+  },
+  {
+    "id": "kb_007",
+    "category": "Industry Solutions",
+    "content": "Professional services firms leverage CloudFlow for resource planning, project profitability tracking, and client collaboration. Integration with accounting systems available.",
+    "use_cases": [
+      "Professional services",
+      "Resource planning",
+      "Profitability"
+    ]
+  },
+  {
+    "id": "kb_008",
+    "category": "Industry Solutions",
+    "content": "Technology companies use CloudFlow for sprint planning, bug tracking, and release management. Native integrations with GitHub, GitLab, and CI/CD pipelines.",
+    "use_cases": [
+      "Tech companies",
+      "Sprint planning",
+      "Development workflows"
+    ]
+  },
+  {
+    "id": "kb_009",
+    "category": "Pricing & Plans",
+    "content": "Starter plan at $29/user/month for teams of 5-20 users. Professional plan at $49/user/month for 21-100 users with advanced features. Enterprise plan at $79/user/month with custom integrations and dedicated support.",
+    "use_cases": [
+      "Pricing questions",
+      "Plan selection",
+      "Budget planning"
+    ]
+  },
+  {
+    "id": "kb_010",
+    "category": "Implementation",
+    "content": "Average implementation time is 2-4 weeks. Includes data migration, team training, and custom workflow setup. Dedicated customer success manager assigned to Enterprise customers.",
+    "use_cases": [
+      "Implementation timeline",
+      "Onboarding",
+      "Support"
+    ]
+  }
+]

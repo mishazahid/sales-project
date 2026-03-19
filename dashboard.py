@@ -24,8 +24,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# API base URL
-API_BASE_URL = "http://localhost:8000"
+# API base URL – override with API_BASE_URL env var in hosted deployments
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
 
 # Custom CSS
 st.markdown("""

@@ -156,7 +156,24 @@ async def startup_event():
 
 @app.get("/")
 async def root():
-    """Root endpoint."""
+    """Serve frontend index when available, otherwise API info."""
+    index_path = FRONTEND_DIST / "index.html"
+    if index_path.exists():
+        return FileResponse(str(index_path))
+    return {
+        "message": "AI Sales Acceleration Engine API",
+        "version": "1.0.0",
+        "endpoints": {
+            "lead_scoring": "/api/leads/score",
+            "email_generation": "/api/emails/generate",
+            "call_analysis": "/api/calls/analyze"
+        }
+    }
+
+
+@app.get("/api")
+async def api_info():
+    """API information endpoint."""
     return {
         "message": "AI Sales Acceleration Engine API",
         "version": "1.0.0",

@@ -160,10 +160,15 @@ class EmailPersonalizationEngine:
         
         # Initialize OpenAI client if API key provided
         self.client = None
-        if openai_api_key:
-            self.client = OpenAI(api_key=openai_api_key)
-        elif os.getenv('OPENAI_API_KEY'):
-            self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        try:
+            if openai_api_key:
+                self.client = OpenAI(api_key=openai_api_key)
+            elif os.getenv('OPENAI_API_KEY'):
+                self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        except Exception as e:
+            # Keep the app bootable even if OpenAI client init fails.
+            print(f"OpenAI client initialization failed: {e}. Using template fallback.")
+            self.client = None
     
     def generate_personalized_email(self, lead_data: Dict, variant: str = "A") -> Dict:
         """Generate personalized email for a lead using RAG."""

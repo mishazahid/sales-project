@@ -9,11 +9,14 @@ load_dotenv()
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 import pandas as pd
 import sys
 import os
+from pathlib import Path
 
 # Add parent directory to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -27,6 +30,14 @@ app = FastAPI(
     description="API for predictive lead scoring, email personalization, and call intelligence",
     version="1.0.0"
 )
+
+# Serve React build output when hosting frontend + backend in one App Service.
+BASE_DIR = Path(__file__).resolve().parent.parent
+FRONTEND_DIST = BASE_DIR / "frontend" / "dist"
+FRONTEND_ASSETS = FRONTEND_DIST / "assets"
+
+if FRONTEND_ASSETS.exists():
+    app.mount("/assets", StaticFiles(directory=str(FRONTEND_ASSETS)), name="assets")
 
 # CORS middleware
 app.add_middleware(
@@ -161,6 +172,15 @@ async def root():
 async def health_check():
     """Health check endpoint."""
     return {"status": "healthy", "modules_loaded": True}
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    """Serve React/Vite favicon if present."""
+    favicon_path = FRONTEND_DIST / "favicon.ico"
+    if favicon_path.exists():
+        return FileResponse(str(favicon_path))
+    raise HTTPException(status_code=404, detail="Not found")
 
 
 # ==================== Data Access Endpoints ====================
@@ -653,6 +673,21 @@ async def simulate_followup(request: FollowupSimulationRequest):
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/{full_path:path}", include_in_schema=False)
+async def spa_fallback(full_path: str):
+    """
+    Serve SPA index for non-API routes so direct URL refresh works.
+    Keep API paths unresolved here.
+    """
+    if full_path.startswith("api"):
+        raise HTTPException(status_code=404, detail="Not found")
+
+    index_path = FRONTEND_DIST / "index.html"
+    if index_path.exists():
+        return FileResponse(str(index_path))
+    raise HTTPException(status_code=404, detail="Frontend build not found")
 
 
 if __name__ == "__main__":

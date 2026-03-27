@@ -90,7 +90,6 @@ function App() {
       <main className="content">
         <header>
           <h1>AI Sales Acceleration Engine</h1>
-          <p>React frontend for all modules and features.</p>
         </header>
         {error && <div className="alert error">{error}</div>}
         {loading && <div className="alert">Loading data...</div>}

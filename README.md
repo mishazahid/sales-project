@@ -2,6 +2,11 @@
 
 Implementation Plan - Synthetic Data Portfolio Version
 
+## Live Demo
+
+[Open AI Sales Acceleration Engine](https://sales-project-hsevarhth4d4g6ed.centralus-01.azurewebsites.net)
+
+
 ## Project Overview
 
 This project demonstrates a realistic, end-to-end AI Sales Acceleration Engine using synthetic data. It showcases predictive modeling, LLM integration, CRM-style workflows, and measurable ROI simulation.
